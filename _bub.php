@@ -5,6 +5,12 @@
         body {
             margin: 0;
             background-color: #f2f2f2;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+        .banner {
+            width: 100%;
+            height: 75px;
+            background-color: #abd6c5;
         }
         .navi {
             margin: 0;
@@ -32,9 +38,26 @@
             background-color: #222222;
             cursor: pointer;
         }
+        .main {
+            background-color: #dd00d0;
+        }
+        .threed {
+            background-color: #00ddd0;
+        }
+        .php {
+            background-color: #ddd000;
+        }
+        .android {
+            background-color: #0000dd;
+        }
+        .other {
+            background-color: #dd0000;
+        }
     </style>
 </head>
 <body>
+<div id="banner" class="banner">
+</div>
 <div id="navi" class="navi">
     <ul>
         <li><a href="#" onclick="display('main')">Main</a></li>
