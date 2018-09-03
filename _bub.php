@@ -39,7 +39,7 @@
             cursor: pointer;
         }
         .main {
-            background-color: #dd00d0;
+            background-color: #d000dd;
         }
         .threed {
             background-color: #00ddd0;
@@ -72,7 +72,25 @@
 
 <script>
     function display(page) {
+        var element = '#' + page;
 
+        switch (page) {
+            case 'main':
+                $.ajax({
+                    'url' : ''
+                }).done(function {
+                    $(element).html(data);
+                });
+                break;
+            case '3d':
+                break;
+            case 'php':
+                break;
+            case 'android':
+                break;
+            case 'other':
+                break;
+        }
     }
 </script>
 
