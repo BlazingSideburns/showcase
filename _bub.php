@@ -38,21 +38,7 @@
             background-color: #222222;
             cursor: pointer;
         }
-        .main {
-            background-color: #d000dd;
-        }
-        .threed {
-            background-color: #00ddd0;
-        }
-        .php {
-            background-color: #ddd000;
-        }
-        .android {
-            background-color: #0000dd;
-        }
-        .other {
-            background-color: #dd0000;
-        }
+        
     </style>
 </head>
 <body>
@@ -74,23 +60,13 @@
     function display(page) {
         var element = '#' + page;
 
-        switch (page) {
-            case 'main':
-                $.ajax({
-                    'url' : ''
-                }).done(function {
-                    $(element).html(data);
-                });
-                break;
-            case '3d':
-                break;
-            case 'php':
-                break;
-            case 'android':
-                break;
-            case 'other':
-                break;
-        }
+        $.ajax({
+            'url' : 'get_' + page + '.php'
+        }).done(function (data) {
+            if (data) {
+                $(element).html(data);
+            }
+        });
     }
 </script>
 
