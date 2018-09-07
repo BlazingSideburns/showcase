@@ -1,3 +1,3 @@
 <?php
-$output = "other";
+$output = "work";
 exit($output);

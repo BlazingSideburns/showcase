@@ -1,3 +1,3 @@
 <?php
-$output = "other";
+$output = "home";
 exit($output);

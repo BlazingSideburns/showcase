@@ -2,15 +2,25 @@
 <html>
 <head>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             margin: 0;
             background-color: #f2f2f2;
             font-family: "Lucida Console", Monaco, monospace;
+            width: 100%;
+            height: 100%;
         }
         .banner {
             width: 100%;
             height: 75px;
             background-color: #abd6c5;
+        }
+        .content {
+            padding: 10px;
+            width: 100%;
+            height: 100%;
         }
         .navi {
             margin: 0;
@@ -38,37 +48,64 @@
             background-color: #222222;
             cursor: pointer;
         }
-        
+
+        .container {
+            position: relative;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .col {
+            float: left;
+            width: 20%;
+        }
+        .thumbnail {
+            opacity: 0.6;
+        }
+        .active,
+        .thumbnail:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
-<div id="banner" class="banner">
+<div class="banner">
 </div>
-<div id="navi" class="navi">
+<div class="navi">
     <ul>
-        <li><a href="#" onclick="display('main')">Main</a></li>
-        <li><a href="#" onclick="display('3d')">3D</a></li>
-        <li><a href="#" onclick="display('php')">PHP</a></li>
-        <li><a href="#" onclick="display('android')">Android</a></li>
-        <li><a href="#" onclick="display('other')">Other</a></li>
+        <li><a href="#" onclick="display('main')">MAIN</a></li>
+        <li><a href="#" onclick="display('work')">WORK PROJECTS</a></li>
+        <li><a href="#" onclick="display('home')">OWN PROJECTS</a></li>
+        <li><a href="#" onclick="display('other')">OTHER</a></li>
     </ul>
 </div>
-<div id="content" class="content">
+<div class="content">
 </div>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 <script>
-    function display(page) {
-        var element = '#' + page;
+    $(document).ready(function () {
+        display('main');
+    });
 
+    function display(page) {
         $.ajax({
             'url' : 'get_' + page + '.php'
         }).done(function (data) {
-            if (data) {
-                $(element).html(data);
-            }
-        });
+            $('.content').html(data);
+        })
     }
 </script>
+<script>
+    var index = 1;
+    showSlide(index);
 
+    function showSlide (slide) {
+
+    }
+</script>
 </body>
 </html>
