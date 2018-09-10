@@ -49,25 +49,6 @@
             cursor: pointer;
         }
 
-        .container {
-            position: relative;
-        }
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        .col {
-            float: left;
-            width: 20%;
-        }
-        .thumbnail {
-            opacity: 0.6;
-        }
-        .active,
-        .thumbnail:hover {
-            opacity: 1;
-        }
     </style>
 </head>
 <body>
