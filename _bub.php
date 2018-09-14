@@ -57,9 +57,7 @@
 <div class="navi">
     <ul>
         <li><a href="#" onclick="display('main')">MAIN</a></li>
-        <li><a href="#" onclick="display('work')">WORK PROJECTS</a></li>
-        <li><a href="#" onclick="display('home')">OWN PROJECTS</a></li>
-        <li><a href="#" onclick="display('other')">OTHER</a></li>
+        <li><a href="#" onclick="display('work')">FUN PROJECTS</a></li>
     </ul>
 </div>
 <div class="content">
@@ -72,20 +70,38 @@
         display('main');
     });
 
+    document.addEventListener('keyup', function (event) {
+        if (event.code === "ArrowUp") {
+            if (event.code === "ArrowUp") {
+                if (event.code === "ArrowDown") {
+                    if (event.code === "ArrowDown") {
+                        if (event.code === "ArrowLeft") {
+                            if (event.code === "ArrowRight") {
+                                if (event.code === "ArrowLeft") {
+                                    if (event.code === "ArrowRight") {
+                                        if (event.code === "KeyB") {
+                                            if (event.code === "KeyA") {
+                                                if (event.code === "ENTER") {
+                                                    alert("Well played!");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+
     function display(page) {
         $.ajax({
             'url' : 'get_' + page + '.php'
         }).done(function (data) {
             $('.content').html(data);
         })
-    }
-</script>
-<script>
-    var index = 1;
-    showSlide(index);
-
-    function showSlide (slide) {
-
     }
 </script>
 </body>
