@@ -65,35 +65,10 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+<script src="hax.js"></script>
 <script>
     $(document).ready(function () {
         display('main');
-    });
-
-    document.addEventListener('keyup', function (event) {
-        if (event.code === "ArrowUp") {
-            if (event.code === "ArrowUp") {
-                if (event.code === "ArrowDown") {
-                    if (event.code === "ArrowDown") {
-                        if (event.code === "ArrowLeft") {
-                            if (event.code === "ArrowRight") {
-                                if (event.code === "ArrowLeft") {
-                                    if (event.code === "ArrowRight") {
-                                        if (event.code === "KeyB") {
-                                            if (event.code === "KeyA") {
-                                                if (event.code === "ENTER") {
-                                                    alert("Well played!");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     });
 
     function display(page) {

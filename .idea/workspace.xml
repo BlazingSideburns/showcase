@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74f18bd0-03a5-450a-b7fa-1c00fa132eb8" name="Default" comment="" />
+    <list default="true" id="74f18bd0-03a5-450a-b7fa-1c00fa132eb8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_bub.php" beforeDir="false" afterPath="$PROJECT_DIR$/_bub.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_other.php" beforeDir="false" afterPath="$PROJECT_DIR$/beepbeepboop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hax.js" beforeDir="false" afterPath="$PROJECT_DIR$/hax.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,17 +20,17 @@
       <file leaf-file-name="_bub.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_bub.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="67" column="8" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+            <state relative-caret-position="1139">
+              <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hax.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hax.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="306">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -47,6 +53,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="beepbeepboop.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -63,12 +78,15 @@
       <find>konamiCode</find>
       <find>konamiCodePosition</find>
       <find>activateCheats</find>
+      <find>array(</find>
+      <find>)</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;ArrowRight&quot;</replace>
       <replace>code</replace>
       <replace>pos</replace>
       <replace>gogetem</replace>
+      <replace>]</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -86,6 +104,7 @@
         <option value="$PROJECT_DIR$/get_main.php" />
         <option value="$PROJECT_DIR$/_bub.php" />
         <option value="$PROJECT_DIR$/hax.js" />
+        <option value="$PROJECT_DIR$/beepbeepboop.php" />
       </list>
     </option>
   </component>
@@ -168,6 +187,7 @@
       <workItem from="1535960892771" duration="51695000" />
       <workItem from="1536650622569" duration="1199000" />
       <workItem from="1536672514042" duration="10800000" />
+      <workItem from="1537168654165" duration="7863000" />
     </task>
     <task id="LOCAL-00001" summary="Added navi.">
       <created>1535984927660</created>
@@ -222,13 +242,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49179000" />
+    <option name="totallyTimeSpent" value="57042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -266,6 +286,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_bub.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="8" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_work.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_bub.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
         </state>
@@ -292,7 +340,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_other.php">
+    <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
@@ -327,7 +375,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_other.php">
+    <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
@@ -356,13 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_other.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -384,17 +425,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_bub.php">
+    <entry file="file://$PROJECT_DIR$/hax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="67" column="8" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        <state relative-caret-position="306">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hax.js">
+    <entry file="file://$PROJECT_DIR$/_bub.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="1139">
+          <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
