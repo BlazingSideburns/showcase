@@ -57,7 +57,7 @@
 <div class="navi">
     <ul>
         <li><a href="#" onclick="display('main')">MAIN</a></li>
-        <li><a href="#" onclick="display('work')">FUN PROJECTS</a></li>
+        <li><a href="#" onclick="display('work')">WORK</a></li>
     </ul>
 </div>
 <div class="content">
