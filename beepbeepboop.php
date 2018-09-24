@@ -2,23 +2,30 @@
 <html>
 <head>
     <style>
-
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #000;
+        }
+        #level {
+            display: block;
+            width: 100%;
+            text-align:center;
+        }
+        #canvas {
+            display: inline;
+        }
     </style>
 </head>
 <body>
-<?php
-$char = array(
-    $name = "",
-    $x = 0,
-    $y = 0,
-    $colour = 'dodger' = 0x1E90FF,
-    $colour = 'mediumseagreen',	#3CB371 #B0C4DE (lightsteelblue) orange #FFA500 mediumorchid #BA55D3
-);
-?>
+<div id="level">
+    <canvas id="canvas"></canvas>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 <script>
-    const level_0_walls = 0xf44336;
-    const level_0_start = level_0[1][1];
-    const level_0_goale = level_0[13][3];
     const level_0 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -33,15 +40,14 @@ $char = array(
         [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1],
-        [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 2, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_1_walls = 0xe91e63;
-    const level_1_start = level_1[7][7];
-    const level_1_goale = level_1[1][1];
+    const level_0_walls = "#f44336";
+    const level_0_start = [1, 1];
     const level_1 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+        [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
         [1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
         [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1],
@@ -56,9 +62,8 @@ $char = array(
         [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_2_walls = 0x9c27b0;
-    const level_2_start = level_2[7][7];
-    const level_2_goale = level_2[13][1];
+    const level_1_walls = "#e91e63";
+    const level_1_start = [7, 7];
     const level_2 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
@@ -73,12 +78,11 @@ $char = array(
         [1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
         [1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-        [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_3_walls = 0x673ab7;
-    const level_3_start = level_3[7][7];
-    const level_3_goale = level_3[13][13];
+    const level_2_walls = "#9c27b0";
+    const level_2_start = [7, 7];
     const level_3 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
@@ -93,15 +97,14 @@ $char = array(
         [1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
         [1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-        [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_4_walls = 0x3f51b5;
-    const level_4_start = level_4[7][7];
-    const level_4_goale = level_4[1][13];
+    const level_3_walls = "#673ab7";
+    const level_3_start = [7, 7];
     const level_4 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
         [1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
         [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1],
@@ -116,15 +119,14 @@ $char = array(
         [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_5_walls = 0x2196f3;
-    const level_5_start = level_5[1][1];
-    const level_5_goale = level_5[4][9];
+    const level_4_walls = "#3f51b5";
+    const level_4_start = [7, 7];
     const level_5 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1],
-        [1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1],
+        [1, 0, 0, 0, 1, 0, 1, 0, 1, 2, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
         [1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
@@ -136,9 +138,8 @@ $char = array(
         [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_6_walls = 0x03a9f4;
-    const level_6_start = level_6[1][1];
-    const level_6_goale = level_6[13][3];
+    const level_5_walls = "#2196f3";
+    const level_5_start = [1, 1];
     const level_6 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -153,12 +154,11 @@ $char = array(
         [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
-        [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_7_walls = 0x00bcd4;
-    const level_7_start = level_7[3][3];
-    const level_7_goale = level_7[11][11];
+    const level_6_walls = "#03a9f4";
+    const level_6_start = [1, 1];
     const level_7 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
@@ -171,14 +171,13 @@ $char = array(
         [1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
         [1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1],
-        [1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1],
+        [1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 2, 1, 0, 1],
         [1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_8_walls = 0x009688;
-    const level_8_start = level_8[3][11];
-    const level_8_goale = level_8[11][3];
+    const level_7_walls = "#00bcd4";
+    const level_7_start = [3, 3];
     const level_8 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
@@ -191,14 +190,13 @@ $char = array(
         [1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
         [1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1],
-        [1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1],
+        [1, 0, 1, 2, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1],
         [1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_9_walls = 0x4caf50;
-    const level_9_start = level_9[1][1];
-    const level_9_goale = level_9[13][1];
+    const level_8_walls = "#009688";
+    const level_8_start = [3, 11];
     const level_9 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -213,19 +211,18 @@ $char = array(
         [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_10_walls = 0x8bc34a;
-    const level_10_start = level_10[13][1];
-    const level_10_goale = level_10[5][11];
+    const level_9_walls = "#4caf50";
+    const level_9_start = [1, 1];
     const level_10 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
         [1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1],
-        [1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 2, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1],
@@ -236,9 +233,8 @@ $char = array(
         [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_11_walls = 0xcddc39;
-    const level_11_start = level_11[1][1];
-    const level_11_goale = level_11[11][6];
+    const level_10_walls = "#8bc34a";
+    const level_10_start = [13, 1];
     const level_11 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -251,14 +247,13 @@ $char = array(
         [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
         [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1],
-        [1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 1, 2, 1, 0, 1, 0, 0, 0, 0, 1],
         [1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_12_walls = 0xffeb3b;
-    const level_12_start = level_12[1][1];
-    const level_12_goale = level_12[13][13];
+    const level_11_walls = "#cddc39";
+    const level_11_start = [1, 1];
     const level_12 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
@@ -273,12 +268,11 @@ $char = array(
         [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1],
         [1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1],
-        [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_13_walls = 0xffc107;
-    const level_13_start = level_13[7][1];
-    const level_13_goale = level_13[11][11];
+    const level_12_walls = "#ffeb3b";
+    const level_12_start = [1, 1];
     const level_13 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -291,14 +285,13 @@ $char = array(
         [1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1],
         [1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1],
-        [1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1],
+        [1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 2, 1, 0, 1],
         [1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_14_walls = 0xff9800;
-    const level_14_start = level_14[1][1];
-    const level_14_goale = level_14[13][13];
+    const level_13_walls = "#ffc107";
+    const level_13_start = [7, 1];
     const level_14 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -313,12 +306,11 @@ $char = array(
         [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
-        [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+        [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
-    const level_15_walls = 0xff5722;
-    const level_15_start = level_15[1][7];
-    const level_15_goale = level_15[11][3];
+    const level_14_walls = "#ff9800";
+    const level_14_start = [1, 1];
     const level_15 = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -331,11 +323,162 @@ $char = array(
         [1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
         [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
-        [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
         [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
+    const level_15_walls = "#ff5722";
+    const level_15_start = [1, 7];
+
+    const levels = 15;
+    let level = Math.floor(Math.random() * levels);
+    let matrix;
+    let walls;
+    let start;
+
+    switch (level) {
+        case 0:
+            matrix = level_0;
+            walls = level_0_walls;
+            start = level_0_start;
+            break;
+        case 1:
+            matrix = level_1;
+            walls = level_1_walls;
+            start = level_1_start;
+            break;
+        case 2:
+            matrix = level_2;
+            walls = level_2_walls;
+            start = level_2_start;
+            break;
+        case 3:
+            matrix = level_3;
+            walls = level_3_walls;
+            start = level_3_start;
+            break;
+        case 4:
+            matrix = level_4;
+            walls = level_4_walls;
+            start = level_4_start;
+            break;
+        case 5:
+            matrix = level_5;
+            walls = level_5_walls;
+            start = level_5_start;
+            break;
+        case 6:
+            matrix = level_6;
+            walls = level_6_walls;
+            start = level_6_start;
+            break;
+        case 7:
+            matrix = level_7;
+            walls = level_7_walls;
+            start = level_7_start;
+            break;
+        case 8:
+            matrix = level_8;
+            walls = level_8_walls;
+            start = level_8_start;
+            break;
+        case 9:
+            matrix = level_9;
+            walls = level_9_walls;
+            start = level_9_start;
+            break;
+        case 10:
+            matrix = level_10;
+            walls = level_10_walls;
+            start = level_10_start;
+            break;
+        case 11:
+            matrix = level_11;
+            walls = level_11_walls;
+            start = level_11_start;
+            break;
+        case 12:
+            matrix = level_12;
+            walls = level_12_walls;
+            start = level_12_start;
+            break;
+        case 13:
+            matrix = level_13;
+            walls = level_13_walls;
+            start = level_13_start;
+            break;
+        case 14:
+            matrix = level_14;
+            walls = level_14_walls;
+            start = level_14_start;
+            break;
+        case 15:
+            matrix = level_15;
+            walls = level_15_walls;
+            start = level_15_start;
+            break;
+    }
+
+    $(document).ready(function () {
+        let canvas = $('#canvas');
+        let context = canvas.get(0).getContext('2d');
+        let container = $(canvas).parent();
+
+        $(window).resize( resize );
+
+        function resize() {
+            canvas.attr('width', $(window).height());
+            canvas.attr('height', $(window).height());
+
+            let x = canvas.width();
+            let y = canvas.height();
+
+            context.fillStyle = "#ffffff";
+            context.fillRect(0, 0, x, y);
+
+            //wall block size is canvas width||height/levels
+            let size = canvas.width()/levels;
+
+            for (let i = 0; i < levels; i++) {
+                for (let j = 0; j < levels; j++) {
+                    switch (matrix[i][j]) {
+                        case 0:
+                            context.fillStyle = "#eeeeee";
+                            context.fillRect((i * size), (j * size), size, size);
+                            break;
+                        case 1:
+                            context.fillStyle = walls;
+                            context.fillRect((i * size), (j * size), size, size);
+                            break;
+                        case 2:
+                            context.fillStyle = "#aaaaaa";
+                            context.fillRect((i * size), (j * size), size, size);
+                            break;
+                    }
+
+                    document.addEventListener('keyup', function (event) {
+                        switch (event) {
+                            case 'ArrowUp':
+                                break;
+                            case 'ArrowLeft':
+                                break;
+                            case 'ArrowRight':
+                                break;
+                            case 'ArrowDown':
+                                break;
+                            default:
+                                //alert("Only arrow keys now!");
+                                break;
+                        }
+                    });
+
+                }
+            }
+        }
+
+        resize();
+    });
 </script>
 </body>
 </html>

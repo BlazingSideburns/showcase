@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="74f18bd0-03a5-450a-b7fa-1c00fa132eb8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_bub.php" beforeDir="false" afterPath="$PROJECT_DIR$/_bub.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_other.php" beforeDir="false" afterPath="$PROJECT_DIR$/beepbeepboop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hax.js" beforeDir="false" afterPath="$PROJECT_DIR$/hax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beepbeepboop.php" beforeDir="false" afterPath="$PROJECT_DIR$/beepbeepboop.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +17,7 @@
       <file leaf-file-name="_bub.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_bub.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
+            <state relative-caret-position="527">
               <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
             </state>
           </provider>
@@ -56,8 +53,51 @@
       <file leaf-file-name="beepbeepboop.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="524">
+              <caret line="462" column="38" lean-forward="true" selection-start-line="462" selection-start-column="38" selection-end-line="462" selection-end-column="38" />
+              <folding>
+                <element signature="e#416#1247#0#HTML" />
+                <element signature="e#1381#2212#0#HTML" />
+                <element signature="e#2391#3222#0#HTML" />
+                <element signature="e#3357#4188#0#HTML" />
+                <element signature="e#4323#5154#0#HTML" />
+                <element signature="e#5289#6120#0#HTML" />
+                <element signature="e#6255#7086#0#HTML" />
+                <element signature="e#7221#8052#0#HTML" />
+                <element signature="e#8187#9018#0#HTML" />
+                <element signature="e#9153#9984#0#HTML" />
+                <element signature="e#10119#10950#0#HTML" />
+                <element signature="e#11085#11916#0#HTML" />
+                <element signature="e#12051#12882#0#HTML" />
+                <element signature="e#13017#13848#0#HTML" />
+                <element signature="e#13983#14814#0#HTML" />
+                <element signature="e#15027#15858#0#HTML" />
+                <element signature="e#15659#15785#0#HTML" />
+                <element signature="e#15794#15920#0#HTML" />
+                <element signature="e#15929#16055#0#HTML" />
+                <element signature="e#16064#16190#0#HTML" />
+                <element signature="e#16199#16325#0#HTML" />
+                <element signature="e#16334#16460#0#HTML" />
+                <element signature="e#16469#16595#0#HTML" />
+                <element signature="e#16604#16730#0#HTML" />
+                <element signature="e#16739#16865#0#HTML" />
+                <element signature="e#16874#17000#0#HTML" />
+                <element signature="e#17009#17139#0#HTML" />
+                <element signature="e#17148#17278#0#HTML" />
+                <element signature="e#17287#17417#0#HTML" />
+                <element signature="e#17426#17556#0#HTML" />
+                <element signature="e#17565#17695#0#HTML" />
+                <element signature="e#17724#17854#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dva.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dva.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="315" column="64" selection-start-line="315" selection-start-column="64" selection-end-line="315" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -102,8 +142,9 @@
         <option value="$PROJECT_DIR$/get_other.php" />
         <option value="$PROJECT_DIR$/get_work.php" />
         <option value="$PROJECT_DIR$/get_main.php" />
-        <option value="$PROJECT_DIR$/_bub.php" />
         <option value="$PROJECT_DIR$/hax.js" />
+        <option value="$PROJECT_DIR$/_bub.php" />
+        <option value="$PROJECT_DIR$/dva.php" />
         <option value="$PROJECT_DIR$/beepbeepboop.php" />
       </list>
     </option>
@@ -187,7 +228,7 @@
       <workItem from="1535960892771" duration="51695000" />
       <workItem from="1536650622569" duration="1199000" />
       <workItem from="1536672514042" duration="10800000" />
-      <workItem from="1537168654165" duration="7863000" />
+      <workItem from="1537168654165" duration="62908000" />
     </task>
     <task id="LOCAL-00001" summary="Added navi.">
       <created>1535984927660</created>
@@ -238,11 +279,25 @@
       <option name="project" value="LOCAL" />
       <updated>1536940499949</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="stuff">
+      <created>1537200108117</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1537200108117</updated>
+    </task>
+    <task id="LOCAL-00009" summary="stuff">
+      <created>1537286040502</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537286040502</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57042000" />
+    <option name="totallyTimeSpent" value="112087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -425,6 +480,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="315" column="64" selection-start-line="315" selection-start-column="64" selection-end-line="315" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_bub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -432,17 +501,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_bub.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="524">
+          <caret line="462" column="38" lean-forward="true" selection-start-line="462" selection-start-column="38" selection-end-line="462" selection-end-column="38" />
+          <folding>
+            <element signature="e#416#1247#0#HTML" />
+            <element signature="e#1381#2212#0#HTML" />
+            <element signature="e#2391#3222#0#HTML" />
+            <element signature="e#3357#4188#0#HTML" />
+            <element signature="e#4323#5154#0#HTML" />
+            <element signature="e#5289#6120#0#HTML" />
+            <element signature="e#6255#7086#0#HTML" />
+            <element signature="e#7221#8052#0#HTML" />
+            <element signature="e#8187#9018#0#HTML" />
+            <element signature="e#9153#9984#0#HTML" />
+            <element signature="e#10119#10950#0#HTML" />
+            <element signature="e#11085#11916#0#HTML" />
+            <element signature="e#12051#12882#0#HTML" />
+            <element signature="e#13017#13848#0#HTML" />
+            <element signature="e#13983#14814#0#HTML" />
+            <element signature="e#15027#15858#0#HTML" />
+            <element signature="e#15659#15785#0#HTML" />
+            <element signature="e#15794#15920#0#HTML" />
+            <element signature="e#15929#16055#0#HTML" />
+            <element signature="e#16064#16190#0#HTML" />
+            <element signature="e#16199#16325#0#HTML" />
+            <element signature="e#16334#16460#0#HTML" />
+            <element signature="e#16469#16595#0#HTML" />
+            <element signature="e#16604#16730#0#HTML" />
+            <element signature="e#16739#16865#0#HTML" />
+            <element signature="e#16874#17000#0#HTML" />
+            <element signature="e#17009#17139#0#HTML" />
+            <element signature="e#17148#17278#0#HTML" />
+            <element signature="e#17287#17417#0#HTML" />
+            <element signature="e#17426#17556#0#HTML" />
+            <element signature="e#17565#17695#0#HTML" />
+            <element signature="e#17724#17854#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>
