@@ -57,7 +57,9 @@
 <div class="navi">
     <ul>
         <li><a href="#" onclick="display('main')">MAIN</a></li>
-        <li><a href="#" onclick="display('work')">WORK</a></li>
+        <li><a href="#" onclick="display('threedee')">3D</a></li>
+        <li><a href="#" onclick="display('homework')">HOMEWORK</a></li>
+        <li><a href="#" onclick="display('dva')">CV</a></li>
     </ul>
 </div>
 <div class="content">
@@ -73,7 +75,7 @@
 
     function display(page) {
         $.ajax({
-            'url' : 'get_' + page + '.php'
+            'url' : page + '.php'
         }).done(function (data) {
             $('.content').html(data);
         })

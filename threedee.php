@@ -1,5 +1,4 @@
 <?php
-
 $output = "
 <div class='show'>
     <div class='slide' id='sfp1g'>
@@ -21,9 +20,4 @@ $output = "
         <div class='text'>QSFP MPO</div>
     </div>
 </div>
-";
-
-
-echo "
-Hi, this is my stuff!
 ";
