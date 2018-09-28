@@ -57,6 +57,7 @@
 <div class="navi">
     <ul>
         <li><a href="#" onclick="display('main')">MAIN</a></li>
+        <li><a href="#" onclick="display('work')">WORK</a></li>
         <li><a href="#" onclick="display('threedee')">3D</a></li>
         <li><a href="#" onclick="display('homework')">HOMEWORK</a></li>
         <li><a href="#" onclick="display('dva')">CV</a></li>
