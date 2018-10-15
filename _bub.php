@@ -48,7 +48,29 @@
             background-color: #222222;
             cursor: pointer;
         }
-
+        .project {
+            float:left;
+            display: inline-block;
+            padding: 10px
+        }
+        .image {
+            float:left;
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .inside {
+            width: 200px;
+            height: 200px;
+            background: #bbbbbb;
+            border: 10px solid #444444;
+        }
     </style>
 </head>
 <body>
