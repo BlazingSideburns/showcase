@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="three/three.js"></script>
+<script src="three/controls/OrbitControls.js"></script>
+<script src="three/loaders/STLLoader.js"></script>
+<script>
+    // var Optic = {
+    //     type: "",
+    //     brand: "",
+    //     part_name: "",
+    //     info: {
+    //         base: "",
+    //         distance: "",
+    //         wavelength: 0,
+    //         speed: 0,
+    //         DOM: false
+    //     },
+    //     parts: {
+    //         number: 0,
+    //         base: {
+    //             path: "",
+    //             x: 0,
+    //             y: 0,
+    //             z: 0,
+    //             rotation_x: 0,
+    //             rotation_y: 0,
+    //             rotation_z: 0,
+    //             base_colour: 0xffffff,
+    //             metalness: 0,
+    //             roughness: 0
+    //         },
+    //         extra1: {
+    //             path: "",
+    //             x: 0,
+    //             y: 0,
+    //             z: 0,
+    //             rotation_x: 0,
+    //             rotation_y: 0,
+    //             rotation_z: 0,
+    //             base_colour: 0xffffff,
+    //             metalness: 0,
+    //             roughness: 0
+    //         },
+    //         extra2: {
+    //             path: "",
+    //             x: 0,
+    //             y: 0,
+    //             z: 0,
+    //             rotation_x: 0,
+    //             rotation_y: 0,
+    //             rotation_z: 0,
+    //             base_colour: 0xffffff,
+    //             metalness: 0,
+    //             roughness: 0
+    //         }
+    //     },
+    //     sticker_x: 0,
+    //     sticker_y: 0,
+    //     sticker_z: 0,
+    //     sticker_rotation_x: 0,
+    //     sticker_rotation_y: 0,
+    //     sticker_rotation_z: 0,
+    //     sticker_width: 0,
+    //     sticker_height: 0,
+    //     filler: false,
+    //     filler_x: 0,
+    //     filler_y: 0,
+    //     filler_z: 0,
+    //     filler_rotation_x: 0,
+    //     filler_rotation_y: 0,
+    //     filler_rotation_z: 0,
+    //     filler_width: 0,
+    //     filler_height: 0,
+    //     latch: false,
+    //     latch_colour: 'white',
+    //     latch_rad: 0,
+    //     latch_height: 0,
+    //     latch_seg: 0,
+    //     latch_x: 0,
+    //     latch_y: 0,
+    //     latch_z: 0,
+    //     latch_rotation_x: 0,
+    //     latch_rotation_y: 0,
+    //     latch_rotation_z: 0
+    // };
+    //
+    // var path_textures = "model_viewer/textures/";
+    // var path_models = "model_viewer/models/";
+    //
+    // var element_id = "home";
+    // var part_name = "SFP-10G-BXD";
+    // var model_type = "xfpbidi";  //Types: sfp1g / sfp1gbidi / sfp10g / sfp10gbidi / glct / xfp / xfpbidi / qsfplc / qsfpmpo
+    // var latch_colour = 'white';
+    //
+    // Optic.type = model_type;
+    // Optic.brand = "cisco";
+    // Optic.part_name = part_name;
+    // Optic.info.distance = "20km";
+    // Optic.info.wavelength = "1330/1270";
+    // Optic.info.base = "1000Base-SX"; //Example: 1000Base-SX || 10/100/1000Base SFP-T
+
+    switch (Optic.type) {
+        case 'sfp1g':
+            Optic.parts.number = 1;
+            Optic.parts.base.path = path_models + "SFP1G.stl";
+            Optic.parts.base.x = -8;
+            Optic.parts.base.y = -8;
+            Optic.parts.base.z = 40;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xffffff;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            Optic.sticker_y = 3.14;
+            Optic.sticker_z = -10;
+            Optic.sticker_rotation_x = -Math.PI/2;
+            Optic.sticker_width = 11;
+            Optic.sticker_height = 40.5;
+            Optic.filler = true;
+            Optic.filler_y = 3.14;
+            Optic.filler_z = 12.05;
+            Optic.filler_rotation_x = -Math.PI/2;
+            Optic.filler_width = 11;
+            Optic.filler_height = 4.2;
+            Optic.latch = true;
+            Optic.latch_colour = latch_colour;
+            Optic.latch_rad = 0.6;
+            Optic.latch_height = 10;
+            Optic.latch_seg = 40;
+            Optic.latch_y = 4;
+            Optic.latch_z = 28.95;
+            Optic.latch_rotation_z = -Math.PI/2;
+            break;
+        case 'sfp1gbidi':
+            Optic.parts.number = 1;
+            Optic.parts.base.path = path_models + "SFP1Gbidi.stl";
+            Optic.parts.base.x = -8;
+            Optic.parts.base.y = -8;
+            Optic.parts.base.z = 40;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xffffff;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            Optic.sticker_y = 3.14;
+            Optic.sticker_z = -10;
+            Optic.sticker_rotation_x = -Math.PI/2;
+            Optic.sticker_width = 11;
+            Optic.sticker_height = 40.5;
+            Optic.filler = true;
+            Optic.filler_y = 3.14;
+            Optic.filler_z = 12.05;
+            Optic.filler_rotation_x = -Math.PI/2;
+            Optic.filler_width = 11;
+            Optic.filler_height = 4.2;
+            Optic.latch = true;
+            Optic.latch_colour = latch_colour;
+            Optic.latch_rad = 0.6;
+            Optic.latch_height = 10;
+            Optic.latch_seg = 40;
+            Optic.latch_y = 4;
+            Optic.latch_z = 28.95;
+            Optic.latch_rotation_z = -Math.PI/2;
+            break;
+        case 'sfp10g':
+            Optic.parts.number = 1;
+            Optic.parts.base.path = path_models + "SFP10G.stl";
+            Optic.parts.base.x = -8;
+            Optic.parts.base.y = -8;
+            Optic.parts.base.z = 35;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xffffff;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            Optic.sticker_y = 3.1;
+            Optic.sticker_z = -9;
+            Optic.sticker_rotation_x = -Math.PI/2;
+            Optic.sticker_width = 11;
+            Optic.sticker_height = 40.5;
+            Optic.filler = false;
+            Optic.latch = true;
+            Optic.latch_colour = latch_colour;
+            Optic.latch_rad = 0.6;
+            Optic.latch_height = 10;
+            Optic.latch_seg = 40;
+            Optic.latch_y = 4;
+            Optic.latch_z = 23.95;
+            Optic.latch_rotation_z = -Math.PI/2;
+            break;
+        case 'sfp10gbidi':
+            Optic.parts.number = 1;
+            Optic.parts.base.path = path_models + "SFP10Gbidi.stl";
+            Optic.parts.base.x = -8;
+            Optic.parts.base.y = -8;
+            Optic.parts.base.z = 35;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xffffff;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            Optic.sticker_y = 3.1;
+            Optic.sticker_z = -9;
+            Optic.sticker_rotation_x = -Math.PI/2;
+            Optic.sticker_width = 11;
+            Optic.sticker_height = 40.5;
+            Optic.filler = false;
+            Optic.latch = true;
+            Optic.latch_colour = latch_colour;
+            Optic.latch_rad = 0.6;
+            Optic.latch_height = 10;
+            Optic.latch_seg = 40;
+            Optic.latch_y = 4;
+            Optic.latch_z = 23.95;
+            Optic.latch_rotation_z = -Math.PI/2;
+            break;
+        case 'glct':
+            Optic.parts.number = 3;
+            Optic.parts.base.path = path_models + "GLC-T_base.stl";
+            Optic.parts.base.x = -14.4;
+            Optic.parts.base.y = -2;
+            Optic.parts.base.z = 45;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xFFFFFF;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            Optic.parts.extra1.path = path_models + "GLC-T_copper.stl";
+            Optic.parts.extra1.x = -14;
+            Optic.parts.extra1.y = -2;
+            Optic.parts.extra1.z = 45;
+            Optic.parts.extra1.rotation_x = -Math.PI/2;
+            Optic.parts.extra1.base_colour = 0xF0E688;
+            Optic.parts.extra1.metalness = 0.8;
+            Optic.parts.extra1.roughness = 0.5;
+            Optic.parts.extra2.path = path_models + "GLC-T_black.stl";
+            Optic.parts.extra2.x = -14;
+            Optic.parts.extra2.y = -2;
+            Optic.parts.extra2.z = 45;
+            Optic.parts.extra2.rotation_x = -Math.PI/2;
+            Optic.parts.extra2.base_colour = 0x000000;
+            Optic.parts.extra2.metalness = 0;
+            Optic.parts.extra2.roughness = 1;
+            Optic.sticker_x = -2.1;
+            Optic.sticker_y = 10.8;
+            Optic.sticker_z = -16.4;
+            Optic.sticker_rotation_x = -Math.PI/2;
+            Optic.sticker_width = 14;
+            Optic.sticker_height = 38;
+            Optic.filler = false;
+            Optic.latch = false;
+            break;
+        case 'xfp':
+            Optic.parts.number = 1;
+            Optic.parts.base.path = path_models + "XFP.stl";
+            Optic.parts.base.x = -10.33;
+            Optic.parts.base.y = -5;
+            Optic.parts.base.z = 38;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xFFFFFF;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            Optic.sticker_y = 4.45;
+            Optic.sticker_z = -1.85;
+            Optic.sticker_rotation_x = -Math.PI/2;
+            Optic.sticker_width = 16;
+            Optic.sticker_height = 38;
+            break;
+        case 'xfpbidi':
+            Optic.parts.number = 1;
+            Optic.parts.base.path = path_models + "XFPbidi.stl";
+            Optic.parts.base.x = -10.5;
+            Optic.parts.base.y = -5;
+            Optic.parts.base.z = 38;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xFFFFFF;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            Optic.sticker_y = 4.45;
+            Optic.sticker_z = -1.85;
+            Optic.sticker_rotation_x = -Math.PI/2;
+            Optic.sticker_width = 16;
+            Optic.sticker_height = 38;
+            break;
+        case 'qsfplc':
+            Optic.parts.number = 1;
+            Optic.parts.base.path = path_models + "QSFPlc.stl";
+            Optic.parts.base.x = 0;
+            Optic.parts.base.y = 0;
+            Optic.parts.base.z = 0;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xFFFFFF;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            break;
+        case 'qsfpmpo':
+            Optic.parts.number = 3;
+            Optic.parts.base.path = path_models + "QSFPmpo.stl";
+            Optic.parts.base.x = -10;
+            Optic.parts.base.y = -5;
+            Optic.parts.base.z = 40;
+            Optic.parts.base.rotation_x = -Math.PI/2;
+            Optic.parts.base.base_colour = 0xFFFFFF;
+            Optic.parts.base.metalness = 0.9;
+            Optic.parts.base.roughness = 0.7;
+            Optic.parts.extra1.path = path_models + "QSFPmpo_copper.stl";
+            Optic.parts.extra1.x = -10;
+            Optic.parts.extra1.y = -5;
+            Optic.parts.extra1.z = 40;
+            Optic.parts.extra1.rotation_x = -Math.PI/2;
+            Optic.parts.extra1.base_colour = 0xF0E688;
+            Optic.parts.extra1.metalness = 0.8;
+            Optic.parts.extra1.roughness = 0.5;
+            Optic.parts.extra2.path = path_models + "QSFPmpo_black.stl";
+            Optic.parts.extra2.x = -10;
+            Optic.parts.extra2.y = -5;
+            Optic.parts.extra2.z = 40;
+            Optic.parts.extra2.rotation_x = -Math.PI/2;
+            Optic.parts.extra2.base_colour = 0x000000;
+            Optic.parts.extra2.metalness = 0.5;
+            Optic.parts.extra2.roughness = 0.7;
+            break;
+    }
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(45, window.innerWidth/ window.innerHeight, 0.1, 1000);
+    var renderer = new THREE.WebGLRenderer({antialias: true});
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    var loader = new THREE.STLLoader();
+
+    var container = document.getElementById(element_id);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
+    container.appendChild(renderer.domElement);
+    console.log("Renderer added.");
+
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.75;
+    controls.screenSpacePanning = false;
+    controls.maxPolarAngle = (Math.PI / 2);
+    console.log("Controls set.");
+
+    scene.background = new THREE.Color('white');
+    console.log("Background set.");
+
+    //Test lights
+    var ambient = new THREE.AmbientLight(0xf0f0f0, 0.5);
+    scene.add(ambient);
+    var directional_light = new THREE.DirectionalLight(0xffffff, 0.5);
+    directional_light.position.set(40, 20, 40).normalize();
+    scene.add(directional_light);
+    directional_light = new THREE.DirectionalLight(0xffffff, 0.5);
+    directional_light.position.set(-40, 20, -40).normalize();
+    scene.add(directional_light);
+    directional_light = new THREE.DirectionalLight(0xffffff, 0.5);
+    directional_light.position.set(40, 20, -40).normalize();
+    scene.add(directional_light);
+    directional_light = new THREE.DirectionalLight(0xffffff, 0.5);
+    directional_light.position.set(-40, 20, 40).normalize();
+    scene.add(directional_light);
+    console.log("Lights added.");
+
+    //Shapes
+    switch (Optic.parts.number) {
+        //Intentional switch fallthrough -- DO NOT FIX
+        case 3:
+            console.log("Fetching extra extra...");
+            var extra2_material = new THREE.MeshStandardMaterial({color: Optic.parts.extra2.base_colour, metalness: Optic.parts.extra2.metalness, roughness: Optic.parts.extra2.roughness});
+            extra2_material.side = THREE.DoubleSide;
+            extra2_material.flatShading = false;
+
+            loader.load(Optic.parts.extra2.path, function (geometry) {
+                var extra2 = new THREE.Mesh(geometry, extra2_material);
+                extra2.position.x = Optic.parts.extra2.x;
+                extra2.position.y = Optic.parts.extra2.y;
+                extra2.position.z = Optic.parts.extra2.z;
+                extra2.rotation.x = Optic.parts.extra2.rotation_x;
+                extra2.rotation.y = Optic.parts.extra2.rotation_y;
+                extra2.rotation.z = Optic.parts.extra2.rotation_z;
+
+                scene.add(extra2);
+                console.log("Extra extra added.");
+            });
+
+        case 2:
+            console.log("Fetching extra...");
+            var extra1_material = new THREE.MeshStandardMaterial({color: Optic.parts.extra1.base_colour, metalness: Optic.parts.extra1.metalness, roughness: Optic.parts.extra1.roughness});
+            extra1_material.side = THREE.DoubleSide;
+            extra1_material.flatShading = false;
+
+            loader.load(Optic.parts.extra1.path, function (geometry) {
+                var extra1 = new THREE.Mesh(geometry, extra1_material);
+                extra1.position.x = Optic.parts.extra1.x;
+                extra1.position.y = Optic.parts.extra1.y;
+                extra1.position.z = Optic.parts.extra1.z;
+                extra1.rotation.x = Optic.parts.extra1.rotation_x;
+                extra1.rotation.y = Optic.parts.extra1.rotation_y;
+                extra1.rotation.z = Optic.parts.extra1.rotation_z;
+
+                scene.add(extra1);
+                console.log("Extra added.");
+            });
+
+        case 1:
+            console.log("Fetching base...");
+            var base_material = new THREE.MeshStandardMaterial({color: Optic.parts.base.base_colour, metalness: Optic.parts.base.metalness, roughness: Optic.parts.base.roughness});
+            base_material.side = THREE.DoubleSide;
+            base_material.flatShading = false;
+
+            loader.load(Optic.parts.base.path, function (geometry) {
+                var base = new THREE.Mesh(geometry, base_material);
+                base.position.x = Optic.parts.base.x;
+                base.position.y = Optic.parts.base.y;
+                base.position.z = Optic.parts.base.z;
+                base.rotation.x = Optic.parts.base.rotation_x;
+                base.rotation.y = Optic.parts.base.rotation_y;
+                base.rotation.z = Optic.parts.base.rotation_z;
+
+                scene.add(base);
+                console.log("Base added.");
+            });
+            break;
+
+        default:
+            console.log("Invalid number of parts.");
+    }
+
+    console.log("Creating sticker...");
+
+    var sticker_geometry = new THREE.PlaneBufferGeometry(Optic.sticker_width, Optic.sticker_height);
+    var sticker_material = new THREE.MeshLambertMaterial({map: new THREE.TextureLoader().load(path_textures + "white.jpg")});
+    var sticker = new THREE.Mesh(sticker_geometry, sticker_material);
+
+    sticker.position.x = Optic.sticker_x;
+    sticker.position.y = Optic.sticker_y;
+    sticker.position.z = Optic.sticker_z;
+    sticker.rotation.x = Optic.sticker_rotation_x;
+    sticker.rotation.y = Optic.sticker_rotation_y;
+    sticker.rotation.z = Optic.sticker_rotation_z;
+
+    scene.add(sticker);
+    console.log("Sticker added.");
+
+    if (Optic.filler) {
+        console.log("Creating filler...");
+
+        var filler_geometry = new THREE.PlaneBufferGeometry(Optic.filler_width, Optic.filler_height);
+        var filler_material = new THREE.MeshLambertMaterial({map: new THREE.TextureLoader().load(path_textures + "white.jpg")});
+        var filler = new THREE.Mesh(filler_geometry, filler_material);
+
+        filler.position.x = Optic.filler_x;
+        filler.position.y = Optic.filler_y;
+        filler.position.z = Optic.filler_z;
+        filler.rotation.x = Optic.filler_rotation_x;
+        filler.rotation.y = Optic.filler_rotation_y;
+        filler.rotation.z = Optic.filler_rotation_z;
+
+        scene.add(filler);
+        console.log("Filler added.");
+    }
+
+    if (Optic.latch) {
+        console.log("Creating latch...");
+
+        var latch_geometry = new THREE.CylinderBufferGeometry(Optic.latch_rad, Optic.latch_rad, Optic.latch_height, Optic.latch_seg);
+        var latch_material = new THREE.MeshLambertMaterial();
+        var latch = new THREE.Mesh(latch_geometry, latch_material);
+
+        latch.position.x = Optic.latch_x;
+        latch.position.y = Optic.latch_y;
+        latch.position.z = Optic.latch_z;
+        latch.rotation.x = Optic.latch_rotation_x;
+        latch.rotation.y = Optic.latch_rotation_y;
+        latch.rotation.z = Optic.latch_rotation_z;
+
+        scene.add(latch);
+        console.log("Latch added.");
+        setLatch(latch_colour);
+    }
+
+    camera.position.x = 50;
+    camera.position.y = 50;
+    console.log("Camera set.");
+    console.log("Creating scene...");
+    setLabel(Optic.brand);
+
+    //"Main" function
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+        controls.update();
+    }
+    animate();
+
+    function setLabel (brand) {
+        console.log("Fetching label...");
+
+        var texture = new THREE.TextureLoader().load('get_label.php?type=' + Optic.type +
+            '&brand=' + brand +
+            '&part_name=' + Optic.part_name +
+            '&base=' + Optic.info.base +
+            '&distance=' + Optic.info.distance +
+            '&wavelength=' + Optic.info.wavelength +
+            '&width=' + Optic.sticker_width +
+            '&height=' + Optic.sticker_height);
+
+        texture.wrapS = THREE.ClampToEdgeWrapping;
+        texture.minFilter = THREE.NearestFilter;
+
+        if (Optic.latch) {
+            switch (brand) {
+                case 'cisco':
+                    setLatch('black');
+                    break;
+                case 'huawei':
+                    setLatch('gold');
+                    break;
+                case 'juniper':
+                    setLatch('violet');
+                    break;
+                default:
+
+            }
+        }
+
+        sticker.material.map = texture;
+        sticker.material.needsUpdate = true;
+        sticker.needsUpdate = true;
+    }
+
+    function setLatch (colour) {
+        console.log("Setting latch colour...");
+
+        latch.material.color = new THREE.Color(colour);
+    }
+</script>
+</body>
+</html>

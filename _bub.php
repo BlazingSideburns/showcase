@@ -71,6 +71,44 @@
             background: #bbbbbb;
             border: 10px solid #444444;
         }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: flex-start;
+        }
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        .flex-col {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+        .flex-col canvas {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+        .flex-item {
+            width: 100%;
+        }
+
+        @media (max-width: 800px) {
+            .flex-col {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .flex-col {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -85,8 +123,7 @@
         <li><a href="#" onclick="display('dva')">CV</a></li>
     </ul>
 </div>
-<div class="content">
-</div>
+<div class="content"></div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>

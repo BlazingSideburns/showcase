@@ -3,7 +3,7 @@ $output = "
 <div class='project'>
 <div class='image left'><div class='inside'></div></div>
 <h4>Paperless</h4>
-The assignment was simple: create a database that automatically collects and processes documents before storing them in a searchable database. Paperless Office collects documents sent as attachments to its private email address
+Self-storing database. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida et tellus quis pretium. Phasellus lobortis, lectus non placerat fringilla, orci dui imperdiet leo, eget condimentum turpis augue quis mauris.
 </div>
 <div class='project'>
 <div class='image right'><div class='inside'></div></div>
@@ -19,12 +19,12 @@ Automation and standardisation was important, so everything needed to be faster.
 
 //f5fcd9
 
-//ffbaba
-//ffddba
-//ffffba
-//ddffba
-//baddff
-//ddbaff
+//ffbaba red
+//ffddba orange
+//ffffba yellow
+//ddffba green
+//baddff blue
+//ddbaff purple
 
 //87CEFA FFA07A e8d9fc FFB6C1 E6E6FA
 
