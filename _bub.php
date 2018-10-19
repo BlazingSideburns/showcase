@@ -127,6 +127,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+<script src="three/three.js"></script>
+<script src="three/controls/OrbitControls.js"></script>
+<script src="three/loaders/STLLoader.js"></script>
 <script src="hax.js"></script>
 <script>
     $(document).ready(function () {

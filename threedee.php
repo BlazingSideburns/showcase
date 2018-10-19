@@ -53,18 +53,43 @@ $output = "
     
     for (var i=0; i<types.length; i++) {
         var type = types[i];
-        
         var path = '/images/models/' + type;
         var element = document.getElementById(type);
         element.appendChild(renderer.domElement);
         
-        if (type == 'glct' || type == 'qsfpmpo') {
-            
+        var material;
+        var mesh;
+        switch (type) {
+            case 'glct' || 'qsfpmpo':
+                material = new THREE.MeshStandardMaterial({color: 0x000000, metalness: 0, roughness: 1})
+                material.side = THREE.DoubleSide;
+                material.flatShading = false;
+                loader.load(path + '_black.stl', function(geometry) {
+                    mesh = new THREE.Mesh(geometry, material);
+                    mesh.rotation.x = (Math.PI / 2);
+                    scene.add(mesh)
+                });
+                material = new THREE.MeshStandardMaterial({color: 0xF0E688, metalness: 0.8, roughness: 0.5})
+                material.side = THREE.DoubleSide;
+                material.flatShading = false;
+                loader.load(path + '_copper.stl', function(geometry) {
+                    mesh = new THREE.Mesh(geometry, material);
+                    mesh.rotation.x = (Math.PI / 2);
+                    scene.add(mesh)
+                });
+            default:
+                material = new THREE.MeshStandardMaterial({color: 0x000000, metalness: 0.9, roughness: 0.7})
+                material.side = THREE.DoubleSide;
+                material.flatShading = false;
+                loader.load(path + '.stl', function(geometry) {
+                    mesh = new THREE.Mesh(geometry, material);
+                    mesh.rotation.x = (Math.PI / 2);
+                    scene.add(mesh)
+                });
+                break;
+                    
         }
     };
-   
     
-    
-   
 </script>
 ";
