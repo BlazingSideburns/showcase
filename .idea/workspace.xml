@@ -1,42 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74f18bd0-03a5-450a-b7fa-1c00fa132eb8" name="Default" comment="stuff">
-      <change afterPath="$PROJECT_DIR$/CANVAS.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/models/qsfplc.stl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/models/qsfpmpo_base.stl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/models/qsfpmpo_black.stl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/models/qsfpmpo_copper.stl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/models/xfp.stl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/models/xfpbidi.stl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three/controls/OrbitControls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three/controls/TrackballControls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three/loaders/MTLLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three/loaders/OBJLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three/loaders/OBJMTLLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three/loaders/STLLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three/three.js" afterDir="false" />
+    <list default="true" id="74f18bd0-03a5-450a-b7fa-1c00fa132eb8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_bub.php" beforeDir="false" afterPath="$PROJECT_DIR$/_bub.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/GLC-T_base.stl" beforeDir="false" afterPath="$PROJECT_DIR$/images/models/glct_base.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/GLC-T_base2.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/GLC-T_black.stl" beforeDir="false" afterPath="$PROJECT_DIR$/images/models/glct_black.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/GLC-T_black2.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/GLC-T_copper.stl" beforeDir="false" afterPath="$PROJECT_DIR$/images/models/glct_copper.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/GLC-T_copper2.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/QSFPlc.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/QSFPmpo.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/QSFPmpo_black.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/SFP10G.stl" beforeDir="false" afterPath="$PROJECT_DIR$/images/models/sfp10g.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/SFP10Gbidi.stl" beforeDir="false" afterPath="$PROJECT_DIR$/images/models/sfp10gbidi.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/SFP1G.stl" beforeDir="false" afterPath="$PROJECT_DIR$/images/models/sfp1g.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/SFP1Gbidi.stl" beforeDir="false" afterPath="$PROJECT_DIR$/images/models/sfp1gbidi.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/SFPforreal.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/Untitled.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/XFP.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/XFPbidi.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/models/bidiforreal.stl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threedee.php" beforeDir="false" afterPath="$PROJECT_DIR$/threedee.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,43 +12,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="CANVAS.html" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/CANVAS.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="526">
-                    <caret line="387" lean-forward="true" selection-start-line="387" selection-end-line="387" />
-                    <folding>
-                      <element signature="e#2984#4156#0" />
-                      <element signature="e#4165#5345#0" />
-                      <element signature="e#5354#6330#0" />
-                      <element signature="e#6339#7323#0" />
-                      <element signature="e#7623#9164#0" />
-                      <element signature="e#8882#9524#0" />
-                      <element signature="e#9824#10473#0" />
-                      <element signature="e#10482#10922#0" />
-                      <element signature="e#10931#12174#0" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_bub.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_bub.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_bub.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="108" column="31" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
+            <state relative-caret-position="184">
+              <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -105,11 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="threedee.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="threedee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/threedee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+            <state relative-caret-position="204">
+              <caret line="12" column="117" selection-start-line="12" selection-start-column="117" selection-end-line="12" selection-end-column="117" />
+              <folding>
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,7 +70,7 @@
       <file leaf-file-name="dva.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dva.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5882">
+            <state relative-caret-position="813">
               <caret line="346" column="22" selection-start-line="346" selection-start-column="22" selection-end-line="346" selection-end-column="22" />
             </state>
           </provider>
@@ -135,7 +79,7 @@
       <file leaf-file-name="beepbeepboop.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8007">
+            <state relative-caret-position="1119">
               <caret line="471" column="7" selection-start-line="471" selection-start-column="7" selection-end-line="471" selection-end-column="7" />
             </state>
           </provider>
@@ -310,7 +254,7 @@
       <workItem from="1538034190407" duration="7166000" />
       <workItem from="1539333092400" duration="7760000" />
       <workItem from="1539587490410" duration="24000" />
-      <workItem from="1539588653507" duration="35676000" />
+      <workItem from="1539588653507" duration="42882000" />
     </task>
     <task id="LOCAL-00001" summary="Added navi.">
       <created>1535984927660</created>
@@ -403,25 +347,40 @@
       <option name="project" value="LOCAL" />
       <updated>1539619144844</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="stuff">
+      <created>1539955036434</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1539955036434</updated>
+    </task>
+    <task id="LOCAL-00015" summary="stuff">
+      <created>1539958118004</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1539958118004</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192286000" />
+    <option name="totallyTimeSpent" value="199492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" weight="0.32960895" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32960895" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -448,13 +407,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="stuff" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8007">
-          <caret line="471" column="7" selection-start-line="471" selection-start-column="7" selection-end-line="471" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -690,22 +642,42 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get_home.php" />
-    <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
+    <entry file="file://$PROJECT_DIR$/images/Paperless.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/loaders/MTLLoader.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CANVAS.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8007">
-          <caret line="471" column="7" selection-start-line="471" selection-start-column="7" selection-end-line="471" selection-end-column="7" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/models/glct.stl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dva.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5882">
+        <state relative-caret-position="813">
           <caret line="346" column="22" selection-start-line="346" selection-start-column="22" selection-end-line="346" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/Paperless.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/beepbeepboop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1119">
+          <caret line="471" column="7" selection-start-line="471" selection-start-column="7" selection-end-line="471" selection-end-column="7" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hax.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -728,55 +700,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/three/loaders/MTLLoader.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CANVAS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_bub.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="108" column="31" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/models/glct_base.stl">
+    <entry file="file://$PROJECT_DIR$/three/three.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/CANVAS.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="387" lean-forward="true" selection-start-line="387" selection-end-line="387" />
+        <state relative-caret-position="2674">
+          <caret line="474" column="41" lean-forward="true" selection-start-line="474" selection-start-column="41" selection-end-line="474" selection-end-column="41" />
           <folding>
-            <element signature="e#2984#4156#0" />
+            <element signature="e#3275#4447#0" />
             <element signature="e#4165#5345#0" />
             <element signature="e#5354#6330#0" />
             <element signature="e#6339#7323#0" />
-            <element signature="e#7623#9164#0" />
             <element signature="e#8882#9524#0" />
             <element signature="e#9824#10473#0" />
             <element signature="e#10482#10922#0" />
             <element signature="e#10931#12174#0" />
+            <element signature="e#19152#20228#0" />
+            <element signature="e#20261#20373#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/threedee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+        <state relative-caret-position="204">
+          <caret line="12" column="117" selection-start-line="12" selection-start-column="117" selection-end-line="12" selection-end-column="117" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_bub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
         </state>
       </provider>
     </entry>

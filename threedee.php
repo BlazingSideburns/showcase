@@ -3,20 +3,20 @@ $output = "
 <div class='flex-container'>
     <div class='flex-row'>
         <div class='flex-col'>
-            <div class='flex-item' id='sfp1g'></div>
-            <div class='flex-item' id='sfp10g'></div>
+            <div class='flex-item' id='sfp1g'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
+            <div class='flex-item' id='sfp10g'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
         </div>
     </div>
     <div class='flex-row'>
         <div class='flex-col'>
-            <div class='flex-item' id='glct'></div>
-            <div class='flex-item' id='xfp'></div>
+            <div class='flex-item' id='glct'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
+            <div class='flex-item' id='xfp'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
         </div>
     </div>
     <div class='flex-row'>
         <div class='flex-col'>
-            <div class='flex-item' id='qsfplc'></div>
-            <div class='flex-item' id='qsfpmpo'></div>
+            <div class='flex-item' id='qsfplc'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
+            <div class='flex-item' id='qsfpmpo'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
         </div>
     </div>
 </div>
@@ -37,7 +37,7 @@ $output = "
     var controls = new THREE.OrbitControls(camera, renderer.domElement);
     var loader = new THREE.STLLoader();
     
-    renderer.setSize(element.width, element.height);
+    renderer.setSize(element.offsetWidth, element.offsetHeight);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 	renderer.gammaInput = true;
@@ -78,7 +78,7 @@ $output = "
                     scene.add(mesh)
                 });
             default:
-                material = new THREE.MeshStandardMaterial({color: 0x000000, metalness: 0.9, roughness: 0.7})
+                material = new THREE.MeshStandardMaterial({color: 0xffffff, metalness: 0.9, roughness: 0.7})
                 material.side = THREE.DoubleSide;
                 material.flatShading = false;
                 loader.load(path + '.stl', function(geometry) {
@@ -91,5 +91,15 @@ $output = "
         }
     };
     
+    camera.position.x = 50;
+    camera.position.y = 50;
+    
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+        controls.update();
+    }
+    animate();
 </script>
 ";
+exit($output);
