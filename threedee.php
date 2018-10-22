@@ -1,24 +1,12 @@
 <?php
 $output = "
 <div class='flex-container'>
-    <div class='flex-row'>
-        <div class='flex-col'>
-            <div class='flex-item' id='sfp1g'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
-            <div class='flex-item' id='sfp10g'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
-        </div>
-    </div>
-    <div class='flex-row'>
-        <div class='flex-col'>
-            <div class='flex-item' id='glct'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
-            <div class='flex-item' id='xfp'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
-        </div>
-    </div>
-    <div class='flex-row'>
-        <div class='flex-col'>
-            <div class='flex-item' id='qsfplc'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
-            <div class='flex-item' id='qsfpmpo'><canvas style='width: 100px; height: 50px; background-color: #3c82b1'></canvas></div>
-        </div>
-    </div>
+    <div class='flex-item' id='sfp1g'><canvas style='background-color: #f5fcd9'></canvas></div>
+    <div class='flex-item' id='sfp10g'><canvas style='background-color: #f5fcd9'></canvas></div>
+    <div class='flex-item' id='glct'><canvas style='background-color: #f5fcd9'></canvas></div>
+    <div class='flex-item' id='xfp'><canvas style='background-color: #f5fcd9'></canvas></div>
+    <div class='flex-item' id='qsfplc'><canvas style='background-color: #f5fcd9'></canvas></div>
+    <div class='flex-item' id='qsfpmpo'><canvas style='background-color: #f5fcd9'></canvas></div>
 </div>
 
 <script>
@@ -37,7 +25,7 @@ $output = "
     var controls = new THREE.OrbitControls(camera, renderer.domElement);
     var loader = new THREE.STLLoader();
     
-    renderer.setSize(element.offsetWidth, element.offsetHeight);
+    renderer.setSize(element.width, element.height);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 	renderer.gammaInput = true;

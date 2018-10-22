@@ -73,41 +73,17 @@
         }
         .flex-container {
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             align-content: flex-start;
         }
-        .flex-row {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 4px;
-        }
-        .flex-col {
-            flex: 25%;
-            max-width: 25%;
-            padding: 0 4px;
-        }
-        .flex-col canvas {
-            margin-top: 8px;
-            vertical-align: middle;
-        }
         .flex-item {
+            width: 600px;
+            height: 300px;
+        }
+        .flex-item canvas {
             width: 100%;
-        }
-
-        @media (max-width: 800px) {
-            .flex-col {
-                flex: 50%;
-                max-width: 50%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .flex-col {
-                flex: 100%;
-                max-width: 100%;
-            }
+            height: 100%;
         }
     </style>
 </head>
